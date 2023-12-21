@@ -1,7 +1,11 @@
 <!-- app/views/bloco/index.html.erb -->
 
 <!-- Exibir o conteúdo do bloco na página inicial -->
-<div>
-  <h2>Bloco na página inicial</h2>
-  <!-- Adicione aqui o código HTML e CSS para exibir o bloco -->
+<div style="border: <%= @bloco.largura_linha %>px solid <%= @bloco.cor_linha %>; width: <%= @bloco.largura_bloco %>px; height: <%= @bloco.altura_bloco %>px; background-color: <%= @bloco.cor_fundo %>;">
+  <h2 style="font-family: <%= @bloco.fonte %>; font-size: <%= @bloco.tamanho_texto %>px; color: <%= @bloco.cor_texto %>;">
+    <%= @bloco.titulo %>
+  </h2>
+  <p style="font-family: <%= @bloco.fonte %>; font-size: <%= @bloco.tamanho_texto %>px; color: <%= @bloco.cor_texto %>; text-align: <%= @bloco.alinhamento %>;">
+    <%= @bloco.conteudo %>
+  </p>
 </div>
